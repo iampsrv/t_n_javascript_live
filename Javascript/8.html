@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Todo App</title>
+</head>
+<body>
+    <h1>Todo List</h1>
+    <ul id="todoList"></ul>
+    <input type="text" id="newTodoInput" placeholder="Enter a new todo item">
+    <button type="button" onclick="addTodo()">Add Todo</button>
+
+    <script>
+        let todoItems = [];
+
+        function displayTodoList() {
+            const todoListElement = document.getElementById("todoList");
+            todoListElement.innerHTML = ""; // Clear existing list items
+
+            for (let i = 0; i < todoItems.length; i++) {
+                const itemElement = document.createElement("li");
+                itemElement.textContent = todoItems[i];
+                itemElement.addEventListener("click", () => removeTodo(i));
+                todoListElement.appendChild(itemElement);
+            }
+        }
+
+        function addTodo() {
+            const newTodo = document.getElementById("newTodoInput").value.trim();
+            if (newTodo) {
+                todoItems.push(newTodo);
+                displayTodoList();
+                document.getElementById("newTodoInput").value = ""; // Clear input field
+            }
+        }
+
+        function removeTodo(index) {
+            todoItems.splice(index, 1);
+            displayTodoList();
+        }
+
+        displayTodoList();
+    </script>
+</body>
+</html>

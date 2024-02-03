@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 1</title>
+</head>
+<body>
+    <h1>Javascript Tutorial</h1>
+    <p id="paragraph1">This is the first paragraph.</p>
+    <button ondblclick="myFunction1(this)">Hover over me!</button>
+
+    <script>
+
+function myFunction(a) {
+    a.style.backgroundColor = "red";
+}
+function message()
+{
+    console.log("Function invoked")
+}
+function myFunction1(a){
+    myFunction(a)
+    message()
+    message()
+    message()
+}
+    </script>
+</body>
+</html>

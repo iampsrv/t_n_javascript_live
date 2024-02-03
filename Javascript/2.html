@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 2</title>
+</head>
+<body>
+    <h1>Javascript Tutorial</h1>
+    <p>This is a regular paragraph.</p>
+    <p class="important">This is an important paragraph 1.</p>
+    <p class="important">This is another important paragraph 2.</p>
+    <button id="highlightImportant">Highlight Important!</button>
+
+    <script>
+        const button = document.querySelector("#highlightImportant");
+        const importantParagraphs = document.getElementsByClassName("important");
+
+        button.addEventListener("click", function() {
+            for (const paragraph of importantParagraphs) {
+                paragraph.style.backgroundColor = "yellow";
+                paragraph.style.color = "red";
+            }
+        });
+    </script>
+</body>
+</html>

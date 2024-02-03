@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 4</title>
+</head>
+<body>
+    <h1>Javascript Tutorial</h1>
+    <p>Click any paragraph to change its color!</p>
+    <p>This is paragraph 1.</p>
+    <p>This is paragraph 2.</p>
+    <p>This is paragraph 3.</p>
+
+    <script>
+        const paragraphs = document.getElementsByTagName("p");
+
+        for (const paragraph of paragraphs) {
+            paragraph.addEventListener("click", function() {
+                this.style.color = "green";
+            });
+        }
+    </script>
+</body>
+</html>

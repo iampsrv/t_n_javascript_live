@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 3</title>
+</head>
+<body>
+    <h1>Javascript Tutorial</h1>
+    <p>Click the button to change its color and reveal a hidden message!</p>
+    <button id="specialButton">Click Me!</button>
+    <p id="hiddenMessage" style="display: none;">This message is now visible!</p>
+
+    <script>
+        const button = document.querySelector("#specialButton");
+        const hiddenMessage = document.querySelector("#hiddenMessage");
+
+        button.addEventListener("click", function() {
+            button.style.backgroundColor = "gray";
+            button.textContent = "Clicked!";
+            hiddenMessage.style.display = "block";
+        });
+    </script>
+</body>
+</html>

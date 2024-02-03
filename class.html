@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Classes Example</title>
+</head>
+<body>
+    <h1>JavaScript Classes and Inheritance</h1>
+    <button id="showDetails">Show Car Details</button>
+    <script>
+        class Car {
+            constructor(make, model) {
+                this.make = make;
+                this.model = model;
+            }
+
+            displayDetails() {
+                console.log(`Car: ${this.make} ${this.model}`);
+            }
+        }
+
+        class ElectricCar extends Car {
+            constructor(make, model, batteryLevel) {
+                super(make, model); // Calling the parent class constructor
+                this.batteryLevel = batteryLevel; // Additional property for ElectricCar
+            }
+
+            displayDetails() {
+                super.displayDetails(); // Call the parent's displayDetails method
+                console.log(`Battery Level: ${this.batteryLevel}%`);
+            }
+        }
+
+        // Function to create cars and show their details
+        function showCarDetails() {
+            const myCar = new Car('Toyota', 'Corolla');
+            const myElectricCar = new ElectricCar('Tesla', 'Model 3', 90);
+
+            myCar.displayDetails(); // Output: Car: Toyota Corolla
+            myElectricCar.displayDetails(); // Output: Car: Tesla Model 3, Battery Level: 90%
+        }
+
+        // Adding event listener to button
+        document.getElementById('showDetails').addEventListener('click', showCarDetails);
+    </script>
+</body>
+</html>

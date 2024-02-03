@@ -1,0 +1,29 @@
+<!-- varible hoisting -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Hoisting Example</title>
+</head>
+<body>
+    <h1>JavaScript Variable Hoisting</h1>
+    <script>
+        console.log("Value of hoistedVar before declaration:", hoistedVar); // Outputs: undefined due to hoisting
+
+        var hoistedVar = "This is a hoisted variable";
+        
+        console.log("Value of hoistedVar after declaration:", hoistedVar); // Outputs: This is a hoisted variable
+        // let notHoistedVar = "Variables declared with 'let' are not accessible before declaration";
+        // Example demonstrating the temporal dead zone with let
+        try {
+            console.log(notHoistedVar); // This will throw a ReferenceError
+        } catch(e) {
+            console.log("Accessing a 'let' variable before declaration results in:", e.message);
+        }
+
+        let notHoistedVar = "Variables declared with 'let' are not accessible before declaration";
+    </script>
+</body>
+</html>

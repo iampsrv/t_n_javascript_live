@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Counter with Replacement</title>
+</head>
+<body>
+    <h1>Word Counter</h1>
+    <textarea id="textInput" rows="5" cols="30"></textarea><br><br>
+    <button type="button" onclick="countWords()">Count Words</button>
+    <button type="button" onclick="replaceWord()">Replace Word</button>
+
+    <script>
+        function countWords() {
+            const text = document.getElementById("textInput").value;
+            const words = text.trim().split(/\s+/).length;
+            alert("Total words: " + words);
+        }
+
+        function replaceWord() {
+            const originalText = document.getElementById("textInput").value;
+            const newWord = prompt("Enter the word to replace:");
+            const replacementWord = prompt("Enter the new word:");
+
+            if (newWord && replacementWord) {
+                const updatedText = originalText.replace(new RegExp(newWord, "g"), replacementWord);
+                document.getElementById("textInput").value = updatedText;
+                alert("Word replaced successfully!");
+            } else {
+                alert("Please provide both the word to replace and the new word.");
+            }
+        }
+    </script>
+</body>
+</html>

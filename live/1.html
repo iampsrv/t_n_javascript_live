@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 1</title>
+</head>
+<body>
+    <h1>Javascript Tutorial</h1>
+    <p id="paragraph1">This is the first paragraph.</p>
+    <button id="changeText">Change Text</button>
+
+    <script>
+        const button = document.querySelector("#changeText");
+        const paragraph1 = document.getElementById("paragraph1");
+        console.log(paragraph1)
+        console.log(button)
+        button.addEventListener("click", function() {
+            paragraph1.textContent = "The text has been changed dynamically!";
+        });
+    </script>
+</body>
+</html>

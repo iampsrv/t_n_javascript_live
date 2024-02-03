@@ -1,0 +1,30 @@
+Outline for Basic JavaScript:
+
+ 
+
+Introduction
+Your First Script (done)
+A brief History (done)
+Introduction to Variables (done), let vs const vs var (done)
+Merging Variables (done)
+Console Logging (done)
+Selecting HTML elements (done)
+Mini Project 1
+String Manipulation (Done)
+Accepting User Inputs (done)
+Handling Opposite Operators
+Comparison operators (done)
+Mini Project 2
+Code Comments (done) single line and multi line
+Boolean Logic (done)
+Arithmetic Operators (done)
+Making Lists with Arrays
+Checking Variable Types (done)
+Variable Casting (Variable conversion) (done) String, parseInt, parseFloat
+More Comparison Operators (done)
+Mini Project 3
+Functions (done)
+Practice with Functions
+Mini Project 4
+
+RsPs@9705
